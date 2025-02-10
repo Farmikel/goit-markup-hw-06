@@ -984,14 +984,14 @@ resize: none;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1439px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
   .team-section .container, .footer-container {
     max-width: 584px;
   }
 
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
     padding: 0 15px;
