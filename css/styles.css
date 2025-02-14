@@ -90,12 +90,6 @@ main {
   display: block;
 }
 
-/* .header .logo {
-  margin: 16px 0;
-} */
-
-
-
 .nav-links {
   gap: 40px;
   margin-right: 332px;
@@ -170,9 +164,6 @@ main {
 
 .menu-button {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 24px;
   height: 24px;
   border: none;
@@ -192,6 +183,10 @@ main {
   z-index: 10;
   padding: 72px 24px 40px 16px;
   opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .mob-menu-close-button {
@@ -209,11 +204,14 @@ main {
   right: 24px;
 }
 
+.mob-navigation {
+  flex-grow: 1;
+}
+
 .mob-links {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-bottom: 168px;
 }
 
 .mob-website-navigation-item {
@@ -539,6 +537,10 @@ main {
   gap: 72px;
 }
 
+.footer-info > a {
+  text-align: center;
+}
+
 .footer .second-logo-part {
   color: #F4F4FD;
 }
@@ -546,7 +548,6 @@ main {
 .footer-logo {
   display: block;
   margin-bottom: 16px;
-  padding-left: 86px;
 }
 
 .footer-text {
@@ -593,7 +594,7 @@ main {
 
 .footer-input-email {
   padding-left: 16px;
-  border: 1px solid #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   width: 288px;
   height: 40px;
@@ -951,8 +952,8 @@ resize: none;
     min-width: 356px;
   }
 
-  .footer-logo {
-    padding-left: 0;
+  .footer-info>a {
+    text-align: left;
   }
 
   .footer-text {
@@ -969,8 +970,13 @@ resize: none;
     text-align: left;
   }
 
+  .footer-media-container {
+    margin: 0;
+  }
+
   .footer-form {
     flex-direction: row;
+    gap: 24px;
   }
 
   .footer-input-email {
@@ -1003,21 +1009,17 @@ resize: none;
     justify-content: start;
   }
 
+  .navigation {
+    margin-right: 332px;
+  }
+
   .nav-links {
     margin-left: 0;
-    margin-right: 332px;
+    margin-right: 0;
   }
 
   .header .logo {
     margin-right: 76px;
-  }
-
-  .contact-links {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    justify-content: center;
-    padding-top: 16px;
   }
 
   .address-items {
@@ -1118,6 +1120,10 @@ resize: none;
 
   .footer-form {
     gap: 24px;
+  }
+
+  .footer-input-email {
+    border: 1px solid #FFFFFF;
   }
 
   .footer-submit-button {
